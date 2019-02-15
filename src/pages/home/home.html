@@ -7,8 +7,11 @@
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  Raw:
+  <div *ngFor="let row of data">
+    <ion-textarea [placeholder]="row['col1']"></ion-textarea>
+    <ion-textarea [placeholder]="row['col2']"></ion-textarea>
+  </div>
+  Table:
+  <ion-textarea [placeholder]="table.toString()"></ion-textarea>
 </ion-content>
